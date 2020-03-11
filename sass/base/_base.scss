@@ -1,0 +1,142 @@
+*,
+*:focus {
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba($blue, 0.9);
+  color: $white;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  display: block;
+  direction: ltr;
+  background: $background;
+  box-sizing: border-box;
+  color: $black;
+  font-family: $baseFont;
+  font-weight: inherit;
+  font-size: 1rem;
+  line-height: 1.6em;
+  letter-spacing: 0;
+  text-align: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+#site-content {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// Lists
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Links
+a {
+  color: $gray;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $red;
+  }
+}
+
+// Button
+button,
+.button {
+  display: inline-block;
+  position: relative;
+  font-size: 0.8125rem;
+  line-height: 1.16em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 4.5rem 1rem 2rem;
+  background-color: $black;
+  color: $white;
+  border-radius: $borderRadius;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  outline: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: $white;
+    right: 2rem;
+    top: calc(50% - 1px);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $red;
+    color: $white;
+  }
+
+  &:active {
+    background-color: darken($black, 100);
+    color: $white;
+  }
+
+  &.link {
+    padding: 0 2.5rem 0 0;
+    line-height: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    color: $gray;
+
+    &::after {
+      right: 0;
+      background-color: $gray;
+    }
+
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+
+    &:active {
+      color: darken($black, 100);
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.related {
+  margin: 5rem 0 0;
+  .posts {
+    display: flex;
+    overflow-x: scroll;
+    margin: 0 -1rem;
+    .post {
+      min-width: 248px;
+      padding: 0 0.625rem;
+
+      &:first-child {
+        padding-left: 1rem;
+        padding-right: 0.25rem;
+      }
+
+      &:last-child {
+        padding-right: 1rem;
+        padding-left: 0.25rem;
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .related {
+    margin: 6rem 0 0;
+    .posts {
+      margin: 0 -2rem;
+      .post {
+        padding: 0 1.25rem;
+
+        &:first-child {
+          padding-left: 2rem;
+          padding-right: 0.5rem;
+        }
+
+        &:last-child {
+          padding-right: 2rem;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .related {
+    margin: 8rem 0 0;
+    .posts {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+
+      .post,
+      .post:first-child,
+      .post:last-child {
+        padding: 0;
+        min-width: 100%;
+
+        .media {
+          .attachment-post-thumbnail {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
