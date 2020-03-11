@@ -1,4 +1,17 @@
 <?php 
+	// Post Thumbnails
+	add_theme_support( 'post-thumbnails' );
+
+	// Post Thumbnails
+	add_theme_support( 'menu' );
+
+	// Post Thumbnails sizes
+	add_image_size('work-small', 454, 520, true);
+	add_image_size('work-large', 956, 520, true);
+
+	// Page Title
+	add_theme_support( 'title-tag' );
+
 
 	function jure_scripts_function() {
 
@@ -104,24 +117,4 @@
 		else
 			return ( $widget_title );
 	}
-
-	// Post Thumbnails
-	add_theme_support( 'post-thumbnails' );
-
-	// Post Thumbnails
-	add_theme_support( 'menu' );
-
-	// Post Thumbnails sizes
-	add_image_size('work-small', 454, 520, true);
-	add_image_size('work-large', 956, 520, true);
-
-	// Page Title
-	add_theme_support( 'title-tag' );
-
-	
-
-
-
-
-
 ?>
