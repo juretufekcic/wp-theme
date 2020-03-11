@@ -1,0 +1,147 @@
+.type-post {
+  margin: 4.75rem 0 0;
+
+  .post-title {
+    margin-bottom: 1rem;
+  }
+
+  .post-excerpt {
+    margin-bottom: 2rem;
+
+    > p {
+      margin: 0;
+    }
+  }
+
+  .project-info {
+    &.two-one-one {
+      background-color: rgba($red, 0.03);
+      padding: 1rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    div {
+      h6 {
+        margin-bottom: 0.25rem;
+      }
+      p:last-of-type {
+        margin-bottom: 0;
+        font-size: 1rem;
+        line-height: 1.5em;
+      }
+
+      &:first-child {
+        grid-column: 1/3;
+      }
+
+      &:nth-child(2) {
+        grid-column: 1/2;
+      }
+
+      &:last-child {
+        grid-column: 2/3;
+      }
+    }
+  }
+
+  .wp-block-image {
+    margin: 2rem 0;
+    padding: 0;
+  }
+
+  .post-content {
+    h4 {
+      margin: 0 0 1rem;
+      color: $red;
+      font-family: $boldFont;
+    }
+
+    p {
+      margin-bottom: 1.55555em;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .type-post {
+    margin: 8rem 0 0;
+
+    .post-title {
+      margin-bottom: 1rem;
+    }
+
+    .post-excerpt {
+      margin-bottom: 4rem;
+    }
+
+    .project-info {
+      &.two-one-one {
+        padding: 1.5rem;
+        gap: 1.5rem;
+      }
+
+      div {
+        h6 {
+          margin-bottom: 0.5rem;
+        }
+        p:last-of-type {
+          font-size: 1.125rem;
+          line-height: 1.55555em;
+        }
+      }
+    }
+
+    .wp-block-image {
+      margin: 3.5rem 0 2.5rem 0;
+      padding: 0;
+    }
+
+    .post-content {
+      .one-three {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 2rem 4rem;
+
+        h4 {
+          margin: 0.55em 0 0;
+          grid-column: 1/2;
+        }
+
+        p {
+          grid-column: 2/-1;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .type-post {
+    margin: 10rem 0 0;
+    .project-info {
+      &.two-one-one {
+        padding: 2rem;
+        gap: 2rem;
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+
+      div {
+        &:first-child {
+          grid-column: 1/2;
+        }
+
+        &:nth-child(2) {
+          grid-column: 2/3;
+        }
+
+        &:last-child {
+          grid-column: 3/4;
+        }
+      }
+    }
+  }
+}

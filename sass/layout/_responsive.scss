@@ -1,0 +1,32 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	.container {
+		padding: 0 2rem;
+	}
+
+	.mobile-only {
+		display: none;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.mobile-only {
+		display: none;
+	}
+
+	a {
+		&:active {
+			color: $black;
+		}
+	}
+}
+
+.transition-fade {
+	opacity: 1;
+	transition: 500ms;
+}
+
+html.is-animating .transition-fade {
+	opacity: 0;
+}

@@ -1,0 +1,135 @@
+footer {
+  .container {
+    padding: 3.25rem 1rem 1.5rem 1rem;
+  }
+
+  .footer-widget {
+    padding: 1.25rem;
+    background-color: $black;
+    color: $white;
+    border-radius: $borderRadius;
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .full-width-button {
+      display: block;
+      background-color: rgba($white, 0.05);
+      text-align: center;
+      border-radius: $borderRadius;
+      transition: all 0.3s ease-in-out;
+
+      .button {
+        background-color: transparent;
+        border-radius: 0;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $red;
+        color: $white;
+      }
+
+      &:active {
+        background-color: darken($black, 100);
+        color: $white;
+      }
+    }
+  }
+
+  .made-by-widget {
+    margin: 1.5rem 0 0;
+
+    .custom-html-widget {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+    }
+
+    p,
+    .cd-top {
+      font-size: 0.75rem;
+      line-height: 1.25;
+      color: $gray;
+
+      .love {
+        display: inline-block;
+        width: 14px;
+        height: 12px;
+        background: url(../img/love.svg) no-repeat center;
+        background-size: 13.75px;
+        text-indent: -9999px;
+        overflow: hidden;
+        transform: translateY(1px);
+      }
+    }
+  }
+}
+
+// Small devices (478px and up)
+@media (min-width: 478px) {
+  footer {
+    .footer-widget {
+      padding: 2rem;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  footer {
+    .container {
+      padding: 3.25rem 2rem 1.5rem 2rem;
+      .footer-widget {
+        padding: 3rem;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  footer {
+    .container {
+      padding: 6.75rem 2rem 1.5rem 2rem;
+    }
+
+    .footer-widget {
+      padding: 4rem;
+
+      .custom-html-widget {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2rem;
+
+        h2 {
+          margin-bottom: 0;
+        }
+
+        .full-width-button {
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  .made-by-widget {
+    margin: 1.75rem 0;
+  }
+}
+
+// Medium devices (desktop, 1020px and up)
+@media (min-width: 1020px) {
+  footer {
+    .container {
+      padding: 8.75rem 2rem 1.5rem 2rem;
+    }
+
+    .footer-widget {
+      .custom-html-widget {
+        gap: 4rem;
+      }
+    }
+  }
+}
